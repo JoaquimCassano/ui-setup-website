@@ -1,6 +1,92 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#cacf85ff] via-[#8cba80ff] to-[#658e9cff]">
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b-2 border-[#658e9cff]">
+        <div className="flex items-center justify-between px-8 sm:px-16 py-4 max-w-7xl mx-auto w-full">
+          <div className="flex items-center gap-3">
+            <div className="font-mono text-2xl font-bold text-[#514663ff]">UI</div>
+            <div>
+              <p className="font-mono font-bold text-[#4d5382ff]">UI Setup</p>
+              <p className="text-xs text-[#658e9cff]">AI-Powered UI Cloning</p>
+            </div>
+          </div>
+          
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#features" className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors">
+              How It Works
+            </a>
+            <a href="#requirements" className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors">
+              Requirements
+            </a>
+            <a href="https://github.com/joaquimcassano/ui-setup" target="_blank" rel="noopener noreferrer" className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors">
+              GitHub
+            </a>
+            <a
+              href="https://pypi.org/project/ui-setup/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 bg-[#658e9cff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#4d5382ff] transition-transform duration-120 ease-in-out hover:translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 text-sm"
+            >
+              Install
+            </a>
+          </nav>
+
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden font-mono font-bold text-[#4d5382ff] text-xl hover:text-[#658e9cff] transition-colors"
+          >
+            ≡
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t-2 border-[#658e9cff] bg-white/95 backdrop-blur">
+            <div className="flex flex-col gap-4 px-8 py-6">
+              <a 
+                href="#features" 
+                onClick={() => setIsMenuOpen(false)}
+                className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors"
+              >
+                How It Works
+              </a>
+              <a 
+                href="#requirements" 
+                onClick={() => setIsMenuOpen(false)}
+                className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors"
+              >
+                Requirements
+              </a>
+              <a 
+                href="https://github.com/joaquimcassano/ui-setup" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                onClick={() => setIsMenuOpen(false)}
+                className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://pypi.org/project/ui-setup/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="px-6 py-2 bg-[#658e9cff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#4d5382ff] transition-transform duration-120 ease-in-out hover:translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 text-sm text-center"
+              >
+                Install
+              </a>
+            </div>
+          </div>
+        )}
+      </header>
+
       {/* Hero Section */}
       <div className="flex min-h-screen flex-col justify-center px-8 sm:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
@@ -36,7 +122,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="text-sm text-[#658e9cff] font-light">
+            <p className="text-sm text-black font-light">
               ⭐ Inspired by Jason Zhou's revolutionary UI cloning approach
             </p>
           </div>
