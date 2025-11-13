@@ -22,19 +22,27 @@ The color system is built around a core set of brand colors that maintain consis
 #### Brand Colors
 
 ```css
-/* Primary Brand Blue */
---color-primary: #6FC2FF;
---color-primary-dark: #2BA5FF;
+/* CSS HEX */
+--citron: #cacf85ff;
+--olivine: #8cba80ff;
+--air-force-blue: #658e9cff;
+--ultra-violet: #4d5382ff;
+--english-violet: #514663ff;
 
-/* Brand Yellow (Accent) */
---color-yellow: #ffde00;
---color-yellow-dark: #FFA500;
+/* CSS HSL */
+--citron: hsla(64, 44%, 67%, 1);
+--olivine: hsla(108, 30%, 62%, 1);
+--air-force-blue: hsla(195, 22%, 50%, 1);
+--ultra-violet: hsla(233, 26%, 41%, 1);
+--english-violet: hsla(263, 17%, 33%, 1);
 ```
 
 **Usage:**
-- `#6FC2FF` (Light Blue): Primary CTAs, hero backgrounds, feature sections
-- `#2BA5FF` (Medium Blue): Hover states, active states, gradients
-- `#ffde00` (Yellow): Announcement banners, attention-grabbing elements
+- `#cacf85ff` (Citron): Primary CTAs, hero backgrounds, feature sections
+- `#8cba80ff` (Olivine): Hover states, active states, accents
+- `#658e9cff` (Air Force Blue): Primary text, UI elements
+- `#4d5382ff` (Ultra Violet): Emphasis elements, gradients
+- `#514663ff` (English Violet): Dark accents, backgrounds
 
 #### Neutrals
 
@@ -56,27 +64,31 @@ The color system is built around a core set of brand colors that maintain consis
 
 ### Gradient Colors
 
-```css
-/* Hero Section Gradient */
-background: linear-gradient(135deg, #2BA5FF 0%, #6FC2FF 50%, #FFFFFF 100%);
-
-/* Sidebar Gradient */
-background: linear-gradient(180deg, #6FC2FF 0%, #2BA5FF 100%);
-
-/* Feature Card Gradients */
-background: linear-gradient(135deg, #FFB800 0%, #FFA500 100%);  /* Orange/Yellow */
-background: linear-gradient(135deg, #6FC2FF 0%, #2BA5FF 100%);  /* Blue */
-background: linear-gradient(135deg, #FF6B9D 0%, #FF4757 100%);  /* Pink/Red */
+```scss
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-right: linear-gradient(90deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-bottom: linear-gradient(180deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-left: linear-gradient(270deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-top-right: linear-gradient(45deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-bottom-right: linear-gradient(135deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-top-left: linear-gradient(225deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-bottom-left: linear-gradient(315deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-radial: radial-gradient(#cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
 ```
 
 ### Opacity & Transparency
 
-```css
-/* Semi-transparent backgrounds */
-background-color: #2BA5FF66;  /* 40% opacity blue for CTA sections */
+```scss
+/* SCSS RGB */
+$citron: rgba(202, 207, 133, 1);
+$olivine: rgba(140, 186, 128, 1);
+$air-force-blue: rgba(101, 142, 156, 1);
+$ultra-violet: rgba(77, 83, 130, 1);
+$english-violet: rgba(81, 70, 99, 1);
 ```
 
-**Usage:** Used sparingly for overlay sections and to create depth without heavy shadows.
+**Usage:** Use RGB values for transparency adjustments. Adjust the alpha channel for opacity effects.
 
 ---
 
