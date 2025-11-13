@@ -1,18 +1,3 @@
-# MotherDuck Website Style Guide
-
-## Overview
-
-This style guide documents the comprehensive design system used in the MotherDuck website. The design follows a modern, bold aesthetic with strong typography, vibrant colors, and a clear focus on readability and user experience. The system emphasizes:
-
-- **Bold, uppercase typography** for headings using monospace fonts
-- **Vibrant color palette** centered around blues and yellows
-- **Consistent spacing** using an 8px base unit system
-- **Minimal border radius** (2-4px) for a sharp, modern look
-- **Subtle animations** focused on interactive elements
-- **High contrast** with dark text on light backgrounds and vice versa
-
----
-
 ## Color Palette
 
 ### Primary Colors
@@ -23,40 +8,42 @@ The color system is built around a core set of brand colors that maintain consis
 
 ```css
 /* CSS HEX */
---citron: #cacf85ff;
---olivine: #8cba80ff;
---air-force-blue: #658e9cff;
---ultra-violet: #4d5382ff;
---english-violet: #514663ff;
+--bistre: #472c1bff;
+--burnt-sienna: #ec7357ff;
+--vista-blue: #8fa6cbff;
+--flax: #e0d68aff;
+--nyanza: #d5f9deff;
 
 /* CSS HSL */
---citron: hsla(64, 44%, 67%, 1);
---olivine: hsla(108, 30%, 62%, 1);
---air-force-blue: hsla(195, 22%, 50%, 1);
---ultra-violet: hsla(233, 26%, 41%, 1);
---english-violet: hsla(263, 17%, 33%, 1);
+--bistre: hsla(23, 45%, 19%, 1);
+--burnt-sienna: hsla(11, 80%, 63%, 1);
+--vista-blue: hsla(217, 37%, 68%, 1);
+--flax: hsla(53, 58%, 71%, 1);
+--nyanza: hsla(135, 75%, 91%, 1);
 ```
 
 **Usage:**
-- `#cacf85ff` (Citron): Primary CTAs, hero backgrounds, feature sections
-- `#8cba80ff` (Olivine): Hover states, active states, accents
-- `#658e9cff` (Air Force Blue): Primary text, UI elements
-- `#4d5382ff` (Ultra Violet): Emphasis elements, gradients
-- `#514663ff` (English Violet): Dark accents, backgrounds
+
+- `#472c1bff` (Bistre): Primary CTAs, hero backgrounds, feature sections
+- `#ec7357ff` (Burnt Sienna): Hover states, active states, accents
+- `#8fa6cbff` (Vista Blue): Primary text, UI elements
+- `#e0d68aff` (Flax): Emphasis elements, gradients
+- `#d5f9deff` (Nyanza): Dark accents, backgrounds
 
 #### Neutrals
 
 ```css
 /* Background Colors */
---color-background-primary: #F4EFEA;  /* Main page background - Warm beige */
---color-background-white: #FFFFFF;     /* Content sections, cards */
+--color-background-primary: #f4efea; /* Main page background - Warm beige */
+--color-background-white: #ffffff; /* Content sections, cards */
 
 /* Text Colors */
---color-text-primary: #383838;         /* Main text color - Dark gray */
---color-text-black: #000000;           /* High emphasis text */
+--color-text-primary: #383838; /* Main text color - Dark gray */
+--color-text-black: #000000; /* High emphasis text */
 ```
 
 **Usage:**
+
 - `#F4EFEA`: Primary page background (warm, soft beige)
 - `#FFFFFF`: Content cards, feature sections
 - `#383838`: All primary text, borders, icons
@@ -66,31 +53,91 @@ The color system is built around a core set of brand colors that maintain consis
 
 ```scss
 /* SCSS Gradient */
-$gradient-top: linear-gradient(0deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-right: linear-gradient(90deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-bottom: linear-gradient(180deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-left: linear-gradient(270deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-top-right: linear-gradient(45deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-bottom-right: linear-gradient(135deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-top-left: linear-gradient(225deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-bottom-left: linear-gradient(315deg, #cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
-$gradient-radial: radial-gradient(#cacf85ff, #8cba80ff, #658e9cff, #4d5382ff, #514663ff);
+$gradient-top: linear-gradient(
+  0deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
+$gradient-radial: radial-gradient(
+  #472c1bff,
+  #ec7357ff,
+  #8fa6cbff,
+  #e0d68aff,
+  #d5f9deff
+);
 ```
 
 ### Opacity & Transparency
 
 ```scss
 /* SCSS RGB */
-$citron: rgba(202, 207, 133, 1);
-$olivine: rgba(140, 186, 128, 1);
-$air-force-blue: rgba(101, 142, 156, 1);
-$ultra-violet: rgba(77, 83, 130, 1);
-$english-violet: rgba(81, 70, 99, 1);
+$bistre: rgba(71, 44, 27, 1);
+$burnt-sienna: rgba(236, 115, 87, 1);
+$vista-blue: rgba(143, 166, 203, 1);
+$flax: rgba(224, 214, 138, 1);
+$nyanza: rgba(213, 249, 222, 1);
 ```
 
 **Usage:** Use RGB values for transparency adjustments. Adjust the alpha channel for opacity effects.
-
----
 
 ## Typography
 
@@ -102,16 +149,16 @@ The typography system uses a combination of **Aeonik Mono** (custom monospace) a
 
 ```css
 /* Headings & Titles */
-font-family: 'Aeonik Mono', monospace;
+font-family: "Aeonik Mono", monospace;
 
 /* Body Text */
-font-family: 'Inter', sans-serif;
+font-family: "Inter", sans-serif;
 
 /* Banner/Special Text */
-font-family: 'Aeonik Fono', 'Aeonik Mono';
+font-family: "Aeonik Fono", "Aeonik Mono";
 
 /* Fallback Stack */
-font-family: 'Aeonik Mono', 'Inter', sans-serif;
+font-family: "Aeonik Mono", "Inter", sans-serif;
 ```
 
 ### Font Weights
@@ -119,10 +166,10 @@ font-family: 'Aeonik Mono', 'Inter', sans-serif;
 The system uses a limited set of font weights for clarity:
 
 ```css
-font-weight: 300;  /* Light - Body text, descriptions */
-font-weight: 400;  /* Regular - Headings, buttons, links */
-font-weight: 600;  /* Semi-bold - Nav hover states */
-font-weight: 700;  /* Bold - Logo, special emphasis */
+font-weight: 300; /* Light - Body text, descriptions */
+font-weight: 400; /* Regular - Headings, buttons, links */
+font-weight: 600; /* Semi-bold - Nav hover states */
+font-weight: 700; /* Bold - Logo, special emphasis */
 ```
 
 ### Typography Scale
@@ -132,7 +179,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 ```css
 /* H1 - Hero Title */
 .hero-title {
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
   font-size: 40px;
   line-height: 120%;
   font-weight: 400;
@@ -142,7 +189,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 
 /* H2 - Section Title (Large) */
 .content-title {
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
   font-size: 40px;
   line-height: 140%;
   font-weight: 400;
@@ -152,7 +199,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 
 /* H3 - Card Title */
 .card-title {
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
   font-size: 32px;
   line-height: 140%;
   font-weight: 400;
@@ -162,7 +209,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 
 /* Marquee Text */
 .marquee-content {
-  font-family: 'Aeonik Mono';
+  font-family: "Aeonik Mono";
   font-size: 40px;
   line-height: 120%;
   text-transform: uppercase;
@@ -175,7 +222,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 ```css
 /* Large Body Text */
 .hero-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   line-height: 160%;
   font-weight: 300;
@@ -183,7 +230,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 }
 
 .content-text {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   line-height: 160%;
   font-weight: 300;
@@ -192,7 +239,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 
 /* Regular Body Text */
 .card-description {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 160%;
   font-weight: 400;
@@ -201,7 +248,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 
 /* Banner Text */
 .banner-content {
-  font-family: 'Aeonik Fono', 'Aeonik Mono';
+  font-family: "Aeonik Fono", "Aeonik Mono";
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: normal;
@@ -213,19 +260,19 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 ```css
 /* Navigation Links */
 .nav-link {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 160%;
   font-weight: 400;
 }
 
 .nav-link:hover {
-  font-weight: 600;  /* Bold on hover */
+  font-weight: 600; /* Bold on hover */
 }
 
 /* Footer Links */
 .footer-link {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -240,7 +287,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 ```css
 /* Primary Button */
 .cta-button {
-  font-family: 'Inter', serif;
+  font-family: "Inter", serif;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -248,7 +295,7 @@ font-weight: 700;  /* Bold - Logo, special emphasis */
 }
 
 .cta-button span {
-  font-family: 'Inter', serif;
+  font-family: "Inter", serif;
 }
 ```
 
@@ -276,26 +323,26 @@ The spacing system follows an **8px base unit** with common multipliers for cons
 
 ```css
 /* Micro Spacing */
---space-1:   8px;   /* 1x */
---space-2:   16px;  /* 2x */
---space-3:   24px;  /* 3x */
---space-4:   32px;  /* 4x */
---space-5:   40px;  /* 5x */
+--space-1: 8px; /* 1x */
+--space-2: 16px; /* 2x */
+--space-3: 24px; /* 3x */
+--space-4: 32px; /* 4x */
+--space-5: 40px; /* 5x */
 
 /* Medium Spacing */
---space-7:   56px;  /* 7x */
---space-8:   64px;  /* 8x */
---space-10:  80px;  /* 10x */
+--space-7: 56px; /* 7x */
+--space-8: 64px; /* 8x */
+--space-10: 80px; /* 10x */
 
 /* Large Spacing */
---space-12:  96px;  /* 12x */
---space-15:  120px; /* 15x */
---space-17:  136px; /* 17x */
---space-20:  160px; /* 20x */
+--space-12: 96px; /* 12x */
+--space-15: 120px; /* 15x */
+--space-17: 136px; /* 17x */
+--space-20: 160px; /* 20x */
 
 /* Extra Large Spacing */
---space-22:  176px; /* 22x */
---space-23:  184px; /* 23x */
+--space-22: 176px; /* 22x */
+--space-23: 184px; /* 23x */
 ```
 
 ### Padding System
@@ -304,62 +351,62 @@ The spacing system follows an **8px base unit** with common multipliers for cons
 
 ```css
 /* Buttons */
-padding: 11.5px 18px;  /* Slightly asymmetric for visual balance */
+padding: 11.5px 18px; /* Slightly asymmetric for visual balance */
 
 /* Banner */
-padding: 16px 0;       /* Vertical rhythm */
+padding: 16px 0; /* Vertical rhythm */
 
 /* Cards */
-padding: 174px 32px 32px;  /* Top padding accounts for floating image */
+padding: 174px 32px 32px; /* Top padding accounts for floating image */
 
 /* Sections */
-padding: 120px 0;      /* Vertical section spacing */
-padding: 180px 0;      /* Hero section extra spacing */
+padding: 120px 0; /* Vertical section spacing */
+padding: 180px 0; /* Hero section extra spacing */
 
 /* Content Blocks */
-padding: 8px 0 86px;   /* Progressive vertical spacing */
-padding: 10px 0 20px;  /* Compact vertical spacing */
+padding: 8px 0 86px; /* Progressive vertical spacing */
+padding: 10px 0 20px; /* Compact vertical spacing */
 
 /* Footer */
-padding: 60px 0;       /* Standard section padding */
+padding: 60px 0; /* Standard section padding */
 
 /* Container */
-padding: 0 30px;       /* Horizontal page margins */
+padding: 0 30px; /* Horizontal page margins */
 ```
 
 ### Margin System
 
 ```css
 /* Component Separation */
-margin-bottom: 20px;   /* Small gap */
-margin-bottom: 12px;   /* Tight gap */
-margin-bottom: 40px;   /* Medium gap */
+margin-bottom: 20px; /* Small gap */
+margin-bottom: 12px; /* Tight gap */
+margin-bottom: 40px; /* Medium gap */
 
 /* Section Margins */
-margin-top: 100px;     /* Feature cards offset */
-margin-top: 24px;      /* Button offset */
-margin-top: 40px;      /* Footer separator */
+margin-top: 100px; /* Feature cards offset */
+margin-top: 24px; /* Button offset */
+margin-top: 40px; /* Footer separator */
 
 /* Auto Centering */
-margin: 0 auto;        /* Horizontal centering */
-margin: 0 auto 12px;   /* Center with bottom spacing */
+margin: 0 auto; /* Horizontal centering */
+margin: 0 auto 12px; /* Center with bottom spacing */
 ```
 
 ### Gap System (Flexbox/Grid)
 
 ```css
 /* Micro Gaps */
-gap: 8px;              /* Tight elements */
-gap: 20px;             /* Comfortable spacing */
-gap: 24px;             /* Navigation items */
+gap: 8px; /* Tight elements */
+gap: 20px; /* Comfortable spacing */
+gap: 24px; /* Navigation items */
 
 /* Medium Gaps */
-gap: 32px;             /* Section elements */
-gap: 40px;             /* Content blocks, cards */
+gap: 32px; /* Section elements */
+gap: 40px; /* Content blocks, cards */
 
 /* Large Gaps */
-gap: 122px;            /* Hero grid columns */
-gap: 140px;            /* Major content sections */
+gap: 122px; /* Hero grid columns */
+gap: 140px; /* Major content sections */
 ```
 
 ---
@@ -372,13 +419,13 @@ gap: 140px;            /* Major content sections */
 
 ```css
 .cta-button {
-  background-color: #6FC2FF;
+  background-color: #6fc2ff;
   color: #383838;
   border: 2px solid #383838;
   border-radius: 2px;
   padding: 11.5px 18px;
   font-size: 14px;
-  font-family: 'Inter', serif;
+  font-family: "Inter", serif;
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;
@@ -390,12 +437,12 @@ gap: 140px;            /* Major content sections */
 }
 
 .cta-button:hover {
-  transform: translate(7px, -7px);  /* Playful 3D effect */
+  transform: translate(7px, -7px); /* Playful 3D effect */
 }
 
 .cta-button:active {
   transform: none;
-  background-color: #2BA5FF;
+  background-color: #2ba5ff;
 }
 ```
 
@@ -404,7 +451,7 @@ gap: 140px;            /* Major content sections */
 ```css
 /* Secondary Button (Beige Background) */
 .cta-button.secondary {
-  background-color: #F4EFEA;
+  background-color: #f4efea;
 }
 
 /* Full Width Button */
@@ -441,7 +488,7 @@ gap: 140px;            /* Major content sections */
 
 ```css
 .nav-link {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 160%;
   color: #383838;
@@ -455,7 +502,7 @@ gap: 140px;            /* Major content sections */
 }
 
 .nav-link:hover {
-  font-weight: 600;  /* Bold on hover, no underline */
+  font-weight: 600; /* Bold on hover, no underline */
 }
 ```
 
@@ -472,7 +519,7 @@ gap: 140px;            /* Major content sections */
   .mobile-menu {
     display: flex;
   }
-  
+
   .nav-links {
     display: none;
   }
@@ -487,7 +534,7 @@ gap: 140px;            /* Major content sections */
 .feature-card {
   position: relative;
   border: 2px solid #383838;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 174px 32px 32px;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
@@ -495,20 +542,20 @@ gap: 140px;            /* Major content sections */
 .card-image {
   position: absolute;
   left: 0;
-  bottom: calc(100% - 154px);  /* Overlaps card top */
+  bottom: calc(100% - 154px); /* Overlaps card top */
   width: 100%;
   height: fit-content;
   min-height: 196px;
 }
 
 .card-title {
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
   font-size: 32px;
   line-height: 140%;
   text-transform: uppercase;
   text-align: center;
   background-color: #383838;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 8px 24px;
   width: fit-content;
   margin: 0 auto 12px;
@@ -519,7 +566,7 @@ gap: 140px;            /* Major content sections */
   line-height: 160%;
   text-align: center;
   letter-spacing: normal;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 ```
 
@@ -544,7 +591,7 @@ gap: 140px;            /* Major content sections */
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Aeonik Fono', 'Aeonik Mono';
+  font-family: "Aeonik Fono", "Aeonik Mono";
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: normal;
@@ -557,7 +604,7 @@ gap: 140px;            /* Major content sections */
 
 ```css
 .header-section {
-  background-color: #F4EFEA;
+  background-color: #f4efea;
   border-bottom: 2px solid transparent;
   padding: 20px 0;
   position: sticky;
@@ -587,6 +634,7 @@ gap: 140px;            /* Major content sections */
 ```
 
 **Responsive Behavior:**
+
 - Desktop (≥1302px): Full width with 30px horizontal padding
 - All screens: Auto-centered with max-width constraint
 
@@ -673,6 +721,7 @@ border: 2px solid #383838;
 ```
 
 **Philosophy:** The design achieves depth through:
+
 1. **Bold 2px borders** (#383838)
 2. **Transform translations** on hover
 3. **Color contrast** (vibrant backgrounds vs. neutral text)
@@ -719,6 +768,7 @@ transition: font-weight 200ms ease;
 ```
 
 **Implementation:**
+
 - Duplicates content to create seamless loop
 - Translates by -50% to return to start
 - 30-second duration for smooth, readable scroll
@@ -728,21 +778,21 @@ transition: font-weight 200ms ease;
 ```css
 /* Hover States */
 .nav-link:hover {
-  font-weight: 600;  /* Instant feedback */
+  font-weight: 600; /* Instant feedback */
 }
 
 .cta-button:hover {
-  transform: translate(7px, -7px);  /* 120ms ease-in-out */
+  transform: translate(7px, -7px); /* 120ms ease-in-out */
 }
 
 .banner-link:hover {
-  border-bottom-width: calc(0.09em + 1px);  /* 150ms ease */
+  border-bottom-width: calc(0.09em + 1px); /* 150ms ease */
 }
 
 /* Active States */
 .cta-button:active {
   transform: none;
-  background-color: #2BA5FF;
+  background-color: #2ba5ff;
 }
 ```
 
@@ -795,7 +845,7 @@ border-radius: 50%;
 
 /* Banner Links - No Radius */
 .banner-link {
-  border-radius: 0;  /* Sharp corners */
+  border-radius: 0; /* Sharp corners */
 }
 ```
 
@@ -811,7 +861,7 @@ Transparency is used **sparingly** for overlays and to create visual hierarchy.
 
 ```css
 /* Hex with Alpha Channel */
---overlay-light: #2BA5FF66;  /* 40% opacity - rgba(43, 165, 255, 0.4) */
+--overlay-light: #2ba5ff66; /* 40% opacity - rgba(43, 165, 255, 0.4) */
 
 /* CSS Opacity Property - Rarely Used */
 /* The design prefers hex alpha or rgba over opacity property */
@@ -822,7 +872,7 @@ Transparency is used **sparingly** for overlays and to create visual hierarchy.
 ```css
 /* CTA Section Background Overlay */
 section {
-  background-color: #2BA5FF66;  /* 40% opacity blue */
+  background-color: #2ba5ff66; /* 40% opacity blue */
 }
 
 /* SVG Decorative Elements */
@@ -917,11 +967,11 @@ svg {
   .nav-links {
     display: none;
   }
-  
+
   .mobile-menu {
     display: flex;
   }
-  
+
   .hero-content {
     grid-template-columns: 1fr;
   }
@@ -932,9 +982,11 @@ svg {
 
 ```css
 /* Uppercase Headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
 }
 
 /* Nowrap for UI Elements */
@@ -962,7 +1014,7 @@ h1, h2, h3 {
 
 .card-title {
   width: fit-content;
-  margin: 0 auto;  /* Combined with auto margin for centering */
+  margin: 0 auto; /* Combined with auto margin for centering */
 }
 ```
 
@@ -978,7 +1030,9 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 
 ```html
 <!-- Heading Example -->
-<h1 class="font-['Aeonik_Mono'] text-[40px] leading-[120%] uppercase font-normal">
+<h1
+  class="font-['Aeonik_Mono'] text-[40px] leading-[120%] uppercase font-normal"
+>
   SERVERLESS ANALYTICS
 </h1>
 
@@ -1043,7 +1097,9 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 
 ```html
 <!-- Hover Transform -->
-<button class="hover:translate-x-[7px] hover:-translate-y-[7px] transition-transform duration-[120ms] ease-in-out">
+<button
+  class="hover:translate-x-[7px] hover:-translate-y-[7px] transition-transform duration-[120ms] ease-in-out"
+>
   CTA Button
 </button>
 
@@ -1061,20 +1117,24 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 <a href="#" class="cta-button">
   <span>GET STARTED</span>
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-    <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2"/>
+    <path
+      d="M3 8H13M13 8L8 3M13 8L8 13"
+      stroke="currentColor"
+      stroke-width="2"
+    />
   </svg>
 </a>
 ```
 
 ```css
 .cta-button {
-  background-color: #6FC2FF;
+  background-color: #6fc2ff;
   color: #383838;
   border: 2px solid #383838;
   border-radius: 2px;
   padding: 11.5px 18px;
   font-size: 14px;
-  font-family: 'Inter', serif;
+  font-family: "Inter", serif;
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;
@@ -1091,11 +1151,12 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 
 .cta-button:active {
   transform: none;
-  background-color: #2BA5FF;
+  background-color: #2ba5ff;
 }
 ```
 
 **Variants:**
+
 - **Secondary**: `background-color: #F4EFEA`
 - **Full Width**: `width: 100%; justify-content: center;`
 - **Icon Reversed**: `flex-direction: row-reverse;`
@@ -1107,17 +1168,32 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 ```html
 <div class="feature-card">
   <div class="card-image">
-    <div style="width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center;">
-      <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FFB800 0%, #FFA500 100%); border: 2px solid #383838; border-radius: 50%;"></div>
+    <div
+      style="width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center;"
+    >
+      <div
+        style="width: 120px; height: 120px; background: linear-gradient(135deg, #FFB800 0%, #FFA500 100%); border: 2px solid #383838; border-radius: 50%;"
+      ></div>
     </div>
   </div>
   <h3 class="card-title">FAST QUERIES</h3>
-  <p class="card-description">Execute complex analytical queries in milliseconds with DuckDB's vectorized engine.</p>
+  <p class="card-description">
+    Execute complex analytical queries in milliseconds with DuckDB's vectorized
+    engine.
+  </p>
   <div class="card-button">
-    <a href="#" class="cta-button" style="width: 100%; justify-content: center; flex-direction: row-reverse;">
+    <a
+      href="#"
+      class="cta-button"
+      style="width: 100%; justify-content: center; flex-direction: row-reverse;"
+    >
       <span style="font-size: 14px;">LEARN MORE</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2"/>
+        <path
+          d="M3 8H13M13 8L8 3M13 8L8 13"
+          stroke="currentColor"
+          stroke-width="2"
+        />
       </svg>
     </a>
   </div>
@@ -1128,7 +1204,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 .feature-card {
   position: relative;
   border: 2px solid #383838;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 174px 32px 32px;
 }
 
@@ -1142,13 +1218,13 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 }
 
 .card-title {
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
   font-size: 32px;
   line-height: 140%;
   text-transform: uppercase;
   text-align: center;
   background-color: #383838;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 8px 24px;
   width: fit-content;
   margin: 0 auto 12px;
@@ -1163,6 +1239,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 ```
 
 **Key Features:**
+
 - Floating image overlaps card top
 - Title with dark background
 - Centered text alignment
@@ -1178,7 +1255,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 
 ```css
 .nav-link {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 160%;
   color: #383838;
@@ -1196,6 +1273,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 ```
 
 **Behavior:**
+
 - No underline
 - Weight increases on hover (400 → 600)
 - Minimal padding for touch targets
@@ -1211,12 +1289,12 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 
 ```css
 .content-title {
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
   font-size: 40px;
   line-height: 140%;
   text-transform: uppercase;
   background-color: #383838;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 12px 30px;
   width: fit-content;
   margin-bottom: 12px;
@@ -1224,6 +1302,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 ```
 
 **Usage:**
+
 - Introduces major content sections
 - High contrast (white on dark)
 - Uppercase for emphasis
@@ -1253,12 +1332,12 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 .marquee-section {
   border-top: 2px solid #383838;
   border-bottom: 2px solid #383838;
-  background: #6FC2FF;
+  background: #6fc2ff;
   overflow: hidden;
 }
 
 .marquee-content {
-  font-family: 'Aeonik Mono';
+  font-family: "Aeonik Mono";
   font-size: 40px;
   line-height: 120%;
   text-transform: uppercase;
@@ -1290,6 +1369,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 ```
 
 **Implementation Notes:**
+
 - Content must be duplicated for seamless loop
 - Animation translates by -50% (half the duplicated width)
 - Linear timing for constant speed
@@ -1306,19 +1386,30 @@ However, if migrating to Tailwind, here are equivalent class mappings:
       <div class="hero-left">
         <div>
           <h1 class="hero-title">SERVERLESS ANALYTICS. LIMITLESS SCALE.</h1>
-          <p class="hero-subtitle">MotherDuck is a fast, easy to use, collaborative analytics platform powered by DuckDB that runs in your browser, locally and in the cloud.</p>
+          <p class="hero-subtitle">
+            MotherDuck is a fast, easy to use, collaborative analytics platform
+            powered by DuckDB that runs in your browser, locally and in the
+            cloud.
+          </p>
         </div>
         <div class="hero-buttons">
-          <a href="#" class="cta-button" style="flex: 1; justify-content: center;">
+          <a
+            href="#"
+            class="cta-button"
+            style="flex: 1; justify-content: center;"
+          >
             <span>GET STARTED</span>
             <svg><!-- Arrow icon --></svg>
           </a>
-          <button class="cta-button" style="background-color: #F4EFEA; flex: 1; justify-content: center;">
+          <button
+            class="cta-button"
+            style="background-color: #F4EFEA; flex: 1; justify-content: center;"
+          >
             <span>BOOK A DEMO</span>
           </button>
         </div>
       </div>
-      
+
       <div class="hero-right">
         <div class="hero-image-container">
           <!-- Image or graphic -->
@@ -1331,7 +1422,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 
 ```css
 .hero-section {
-  background-color: #6FC2FF;
+  background-color: #6fc2ff;
   border-bottom: 2px solid #383838;
   padding: 180px 0;
   position: relative;
@@ -1351,7 +1442,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 }
 
 .hero-title {
-  font-family: 'Aeonik Mono', monospace;
+  font-family: "Aeonik Mono", monospace;
   font-size: 40px;
   line-height: 120%;
   text-transform: uppercase;
@@ -1361,7 +1452,7 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 }
 
 .hero-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   line-height: 160%;
   font-weight: 300;
@@ -1398,38 +1489,45 @@ However, if migrating to Tailwind, here are equivalent class mappings:
 ## Design Principles Summary
 
 ### 1. **Bold Typography**
+
 - Uppercase headings in Aeonik Mono
 - Clear hierarchy through size, not weight
 - Ample line-height for readability (160% body, 120-140% headings)
 
 ### 2. **Vibrant, Purposeful Color**
+
 - Limited palette: Blues, yellow, neutral beige/gray
 - High contrast for accessibility
 - Color used to guide attention (yellow banners, blue CTAs)
 
 ### 3. **Generous Spacing**
+
 - 8px base unit system
 - Large section padding (120-180px)
 - Comfortable gaps in grids and flexbox (40-122px)
 
 ### 4. **Minimal Decoration**
+
 - No box shadows
 - Thin borders (2px)
 - Small border radius (2-4px)
 - Flat, modern aesthetic
 
 ### 5. **Playful Interactions**
+
 - Transform-based hover effects
 - Font-weight changes on links
 - Smooth, fast transitions (120-200ms)
 
 ### 6. **Technical Precision**
+
 - Monospace fonts for technical feel
 - Sharp corners and edges
 - Grid-based layouts
 - Sticky positioning for UX
 
 ### 7. **Mobile-First Responsiveness**
+
 - Single breakpoint at 1301px
 - Grid columns collapse to single column
 - Navigation transforms to hamburger menu
@@ -1445,18 +1543,18 @@ All text meets **WCAG AA** standards:
 
 ```css
 /* Primary Text on Light Background */
-color: #383838;        /* Gray */
-background: #F4EFEA;   /* Beige */
+color: #383838; /* Gray */
+background: #f4efea; /* Beige */
 /* Contrast Ratio: 8.5:1 (AAA) */
 
 /* White Text on Dark Background */
-color: #FFFFFF;        /* White */
-background: #383838;   /* Gray */
+color: #ffffff; /* White */
+background: #383838; /* Gray */
 /* Contrast Ratio: 11.8:1 (AAA) */
 
 /* Black Text on Yellow Banner */
-color: #000000;        /* Black */
-background: #ffde00;   /* Yellow */
+color: #000000; /* Black */
+background: #ffde00; /* Yellow */
 /* Contrast Ratio: 13.2:1 (AAA) */
 ```
 
@@ -1465,12 +1563,12 @@ background: #ffde00;   /* Yellow */
 ```css
 /* Buttons - Uses outline-color */
 .cta-button {
-  outline-color: #2BA5FF;
+  outline-color: #2ba5ff;
   outline-offset: 0px;
 }
 
 .cta-button:focus-visible {
-  outline: 2px solid #2BA5FF;
+  outline: 2px solid #2ba5ff;
 }
 ```
 
@@ -1491,9 +1589,9 @@ background: #ffde00;   /* Yellow */
 
 ```css
 @font-face {
-  font-family: 'Aeonik Mono';
+  font-family: "Aeonik Mono";
   src: url(/fonts/AeonikMono/AeonikMono-Regular.woff2) format("woff2");
-  font-display: swap;  /* Prevents FOIT, uses fallback during load */
+  font-display: swap; /* Prevents FOIT, uses fallback during load */
 }
 ```
 
@@ -1575,19 +1673,24 @@ width: fit-content;
 
 ```css
 /* Block-level component */
-.component-name { }
+.component-name {
+}
 
 /* Element within component */
-.component-name-element { }
+.component-name-element {
+}
 
 /* Modifier/variant */
-.component-name--variant { }
+.component-name--variant {
+}
 
 /* State */
-.component-name.is-active { }
+.component-name.is-active {
+}
 ```
 
 **Examples:**
+
 - `.cta-button` (block)
 - `.card-title` (element)
 - `.cta-button--secondary` (modifier)
@@ -1597,27 +1700,40 @@ width: fit-content;
 
 ```css
 /* 1. Reset/Base Styles */
-* { margin: 0; padding: 0; }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 /* 2. Typography */
-h1, h2, h3 { }
+h1,
+h2,
+h3 {
+}
 
 /* 3. Layout/Container */
-.container { }
+.container {
+}
 
 /* 4. Components (alphabetical) */
-.banner { }
-.button { }
-.card { }
+.banner {
+}
+.button {
+}
+.card {
+}
 
 /* 5. Utilities */
-.visually-hidden { }
+.visually-hidden {
+}
 
 /* 6. Media Queries */
-@media (max-width: 1301px) { }
+@media (max-width: 1301px) {
+}
 
 /* 7. Animations */
-@keyframes { }
+@keyframes {
+}
 ```
 
 ---
@@ -1632,17 +1748,20 @@ Document changes to the design system:
 ## Style Guide Changelog
 
 ### v1.1.0 - 2024-01-15
+
 - Added secondary button variant
 - Updated hero section spacing
 - New footer layout
 
 ### v1.0.0 - 2024-01-01
+
 - Initial style guide creation
 ```
 
 ### Regular Audits
 
 **Quarterly review:**
+
 1. Color contrast ratios
 2. Unused CSS rules
 3. New browser features
@@ -1652,6 +1771,7 @@ Document changes to the design system:
 ### Contribution Guidelines
 
 When proposing new styles:
+
 1. Document the use case
 2. Provide visual examples
 3. Ensure consistency with existing system
@@ -1693,6 +1813,6 @@ This style guide provides a complete reference for the MotherDuck website design
 
 For questions or suggestions, please refer to the component examples and implementation guidelines above.
 
-**Last Updated:** 2024-01-15  
-**Version:** 1.0.0  
+**Last Updated:** 2024-01-15
+**Version:** 1.0.0
 **Maintainer:** Development Team

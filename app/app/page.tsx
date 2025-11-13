@@ -1,46 +1,59 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#cacf85ff] via-[#8cba80ff] to-[#658e9cff]">
+    <div className="min-h-screen bg-[#f4efea]">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b-2 border-[#658e9cff]">
+      <header className="sticky top-0 z-50 bg-[#ffffff]/90 backdrop-blur border-b-2 border-[#383838]">
         <div className="flex items-center justify-between px-8 sm:px-16 py-4 max-w-7xl mx-auto w-full">
           <div className="flex items-center gap-3">
-            <div className="font-mono text-2xl font-bold text-[#514663ff]">UI</div>
+            <div className="font-mono text-2xl font-bold text-[#472c1bff]">
+              UI
+            </div>
             <div>
-              <p className="font-mono font-bold text-[#4d5382ff]">UI Setup</p>
-              <p className="text-xs text-[#658e9cff]">AI-Powered UI Cloning</p>
+              <p className="font-mono font-bold text-[#383838]">UI Setup</p>
+              <p className="text-xs text-[#8fa6cbff]">AI-Powered UI Cloning</p>
             </div>
           </div>
-          
+
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors">
+            <a
+              href="#features"
+              className="font-mono font-bold text-[#383838] hover:font-bold transition-colors"
+            >
               How It Works
             </a>
-            <a href="#requirements" className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors">
+            <a
+              href="#requirements"
+              className="font-mono font-bold text-[#383838] hover:font-bold transition-colors"
+            >
               Requirements
             </a>
-            <a href="https://github.com/joaquimcassano/ui-setup" target="_blank" rel="noopener noreferrer" className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors">
+            <a
+              href="https://github.com/joaquimcassano/ui-setup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono font-bold text-[#383838] hover:font-bold transition-colors"
+            >
               GitHub
             </a>
             <a
               href="https://pypi.org/project/ui-setup/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-[#658e9cff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#4d5382ff] transition-transform duration-120 ease-in-out hover:translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 text-sm"
+              className="px-6 py-2 bg-[#ec7357ff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#472c1bff] transition-transform duration-120 ease-in-out hover:translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 text-sm"
             >
               Install
             </a>
           </nav>
 
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden font-mono font-bold text-[#4d5382ff] text-xl hover:text-[#658e9cff] transition-colors"
+            className="md:hidden font-mono font-bold text-[#383838] text-xl hover:font-bold transition-colors"
           >
             ≡
           </button>
@@ -48,28 +61,28 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t-2 border-[#658e9cff] bg-white/95 backdrop-blur">
+          <div className="md:hidden border-t-2 border-[#383838] bg-white/95 backdrop-blur">
             <div className="flex flex-col gap-4 px-8 py-6">
-              <a 
-                href="#features" 
+              <a
+                href="#features"
                 onClick={() => setIsMenuOpen(false)}
-                className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors"
+                className="font-mono font-bold text-[#383838] hover:font-bold transition-colors"
               >
                 How It Works
               </a>
-              <a 
-                href="#requirements" 
+              <a
+                href="#requirements"
                 onClick={() => setIsMenuOpen(false)}
-                className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors"
+                className="font-mono font-bold text-[#383838] hover:font-bold transition-colors"
               >
                 Requirements
               </a>
-              <a 
-                href="https://github.com/joaquimcassano/ui-setup" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://github.com/joaquimcassano/ui-setup"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className="font-mono font-bold text-[#4d5382ff] hover:text-[#658e9cff] transition-colors"
+                className="font-mono font-bold text-[#383838] hover:font-bold transition-colors"
               >
                 GitHub
               </a>
@@ -78,7 +91,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-6 py-2 bg-[#658e9cff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#4d5382ff] transition-transform duration-120 ease-in-out hover:translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 text-sm text-center"
+                className="px-6 py-2 bg-[#ec7357ff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#472c1bff] transition-transform duration-120 ease-in-out hover:translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 text-sm text-center"
               >
                 Install
               </a>
@@ -92,15 +105,15 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
           {/* Left Content */}
           <div>
-            <h1 className="font-mono text-5xl sm:text-6xl font-bold uppercase text-[#514663ff] mb-4 leading-tight tracking-tight">
+            <h1 className="font-mono text-5xl sm:text-6xl font-bold uppercase text-[#472c1bff] mb-4 leading-tight tracking-tight">
               Create UIs That Actually Look Beautiful
             </h1>
 
-            <h2 className="font-mono text-2xl sm:text-3xl font-bold uppercase text-[#4d5382ff] mb-8 leading-tight">
+            <h2 className="font-mono text-2xl sm:text-3xl font-bold uppercase text-[#ec7357ff] mb-8 leading-tight">
               AI-Powered UI Cloning
             </h2>
 
-            <p className="text-lg text-[#4d5382ff] mb-12 leading-relaxed font-light max-w-md">
+            <p className="text-lg text-[#383838] mb-12 leading-relaxed font-light max-w-md">
               Stop vibe coding in the dark. Use AI to clone stunning UIs,
               extract their style, and generate consistently beautiful pages.
             </p>
@@ -108,7 +121,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
                 href="#features"
-                className="px-8 py-4 bg-[#658e9cff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#4d5382ff] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0 text-center"
+                className="px-8 py-4 bg-[#ec7357ff] text-white font-mono font-bold uppercase rounded-sm hover:bg-[#472c1bff] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0 text-center"
               >
                 See how it works
               </a>
@@ -116,54 +129,33 @@ export default function Home() {
                 href="https://pypi.org/project/ui-setup/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-[#8cba80ff] text-[#514663ff] font-mono font-bold uppercase rounded-sm hover:bg-[#cacf85ff] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0 text-center"
+                className="px-8 py-4 bg-[#d5f9deff] text-[#472c1bff] font-mono font-bold uppercase rounded-sm hover:bg-[#e0d68aff] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0 text-center"
               >
                 Install Now
               </a>
             </div>
 
             <p className="text-sm text-black font-light">
-              ⭐ Inspired by Jason Zhou's revolutionary UI cloning approach
+              ⭐ Inspired by Jason Zhou&apos;s revolutionary UI cloning approach
             </p>
           </div>
 
           {/* Right Decorative Section */}
           <div className="hidden lg:flex justify-end items-center">
-            <div className="relative w-full h-96">
-              {/* Decorative cards */}
-              <div className="absolute top-0 right-0 bg-white/80 backdrop-blur p-6 rounded-sm border-2 border-[#658e9cff] shadow-lg transform -rotate-6 w-64">
-                <p className="font-mono text-sm font-bold text-[#4d5382ff] mb-4">
-                  Design System
-                </p>
-                <div className="space-y-2">
-                  <div className="h-3 bg-[#cacf85ff] rounded-sm w-3/4"></div>
-                  <div className="h-3 bg-[#8cba80ff] rounded-sm w-full"></div>
-                  <div className="h-3 bg-[#658e9cff] rounded-sm w-5/6"></div>
+            <div className="w-full">
+              {/* DaisyUI Window Mockup */}
+              <div className="mockup-window border-2 border-[#383838] bg-white">
+                <div className="flex justify-center px-4 py-4 bg-white/50">
+                  <div className="text-sm font-mono text-[#383838]">
+                    ui-setup.example.com
+                  </div>
                 </div>
-              </div>
-
-              <div className="absolute top-32 right-20 bg-white/80 backdrop-blur p-6 rounded-sm border-2 border-[#658e9cff] shadow-lg w-56">
-                <p className="font-mono text-sm font-bold text-[#4d5382ff] mb-4">
-                  Features
-                </p>
-                <div className="space-y-3 text-xs text-[#658e9cff]">
-                  <div>✓ AI-powered cloning</div>
-                  <div>✓ Style extraction</div>
-                  <div>✓ Auto style.md generation</div>
-                  <div>✓ Pixel-perfect recreation</div>
-                </div>
-              </div>
-
-              <div className="absolute bottom-0 right-0 bg-white/80 backdrop-blur p-6 rounded-sm border-2 border-[#658e9cff] shadow-lg transform rotate-3 w-60">
-                <p className="font-mono text-sm font-bold text-[#4d5382ff] mb-4">
-                  Color Palette
-                </p>
-                <div className="flex gap-2">
-                  <div className="w-8 h-8 bg-[#cacf85ff] rounded-sm"></div>
-                  <div className="w-8 h-8 bg-[#8cba80ff] rounded-sm"></div>
-                  <div className="w-8 h-8 bg-[#658e9cff] rounded-sm"></div>
-                  <div className="w-8 h-8 bg-[#4d5382ff] rounded-sm"></div>
-                  <div className="w-8 h-8 bg-[#514663ff] rounded-sm"></div>
+                <div className="grid place-content-center px-0">
+                  <img
+                    src="/screenshot.png"
+                    alt="UI Setup in action"
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -174,48 +166,48 @@ export default function Home() {
       {/* Features Section */}
       <div id="features" className="bg-white py-20 px-8 sm:px-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-mono text-4xl sm:text-5xl font-bold uppercase text-[#514663ff] mb-16 text-center">
+          <h2 className="font-mono text-4xl sm:text-5xl font-bold uppercase text-[#472c1bff] mb-16 text-center">
             How It Works
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="border-2 border-[#658e9cff] rounded-sm p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4 font-mono font-bold text-[#8cba80ff]">
+            <div className="border-2 border-[#383838] rounded-sm p-8 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4 font-mono font-bold text-[#ec7357ff]">
                 1
               </div>
-              <h3 className="font-mono text-2xl font-bold uppercase text-[#4d5382ff] mb-4">
+              <h3 className="font-mono text-2xl font-bold uppercase text-[#472c1bff] mb-4">
                 Find a Website
               </h3>
-              <p className="text-[#658e9cff] leading-relaxed">
+              <p className="text-[#383838] leading-relaxed">
                 Discover a website with UI that speaks to you. Copy its URL and
                 let UI Setup do the work.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="border-2 border-[#658e9cff] rounded-sm p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4 font-mono font-bold text-[#cacf85ff]">
+            <div className="border-2 border-[#383838] rounded-sm p-8 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4 font-mono font-bold text-[#e0d68aff]">
                 2
               </div>
-              <h3 className="font-mono text-2xl font-bold uppercase text-[#4d5382ff] mb-4">
+              <h3 className="font-mono text-2xl font-bold uppercase text-[#472c1bff] mb-4">
                 AI Clones It
               </h3>
-              <p className="text-[#658e9cff] leading-relaxed">
+              <p className="text-[#383838] leading-relaxed">
                 Your AI agent analyzes the screenshot and CSS, then recreates it
                 pixel-perfect in HTML.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="border-2 border-[#658e9cff] rounded-sm p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4 font-mono font-bold text-[#8cba80ff]">
+            <div className="border-2 border-[#383838] rounded-sm p-8 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-4 font-mono font-bold text-[#d5f9deff]">
                 3
               </div>
-              <h3 className="font-mono text-2xl font-bold uppercase text-[#4d5382ff] mb-4">
+              <h3 className="font-mono text-2xl font-bold uppercase text-[#472c1bff] mb-4">
                 Get a Style Guide
               </h3>
-              <p className="text-[#658e9cff] leading-relaxed">
+              <p className="text-[#383838] leading-relaxed">
                 AI auto-generates a comprehensive style.md documenting colors,
                 typography, and components.
               </p>
@@ -227,57 +219,55 @@ export default function Home() {
       {/* Requirements Section */}
       <div className="bg-[#f4efea] py-20 px-8 sm:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-mono text-4xl sm:text-5xl font-bold uppercase text-[#514663ff] mb-12">
+          <h2 className="font-mono text-4xl sm:text-5xl font-bold uppercase text-[#472c1bff] mb-12">
             Requirements
           </h2>
 
           <div className="space-y-4 mb-8">
             <div className="flex items-start gap-4">
-              <div className="text-2xl text-[#8cba80ff] font-bold mt-1">✓</div>
+              <div className="text-2xl text-[#ec7357ff] font-bold mt-1">✓</div>
               <div>
-                <p className="text-lg font-mono font-bold text-[#4d5382ff]">
+                <p className="text-lg font-mono font-bold text-[#472c1bff]">
                   Python 3.7+
                 </p>
-                <p className="text-[#658e9cff]">Latest versions recommended</p>
+                <p className="text-[#383838]">Latest versions recommended</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="text-2xl text-[#8cba80ff] font-bold mt-1">✓</div>
+              <div className="text-2xl text-[#ec7357ff] font-bold mt-1">✓</div>
               <div>
-                <p className="text-lg font-mono font-bold text-[#4d5382ff]">
+                <p className="text-lg font-mono font-bold text-[#472c1bff]">
                   pip
                 </p>
-                <p className="text-[#658e9cff]">Python package manager</p>
+                <p className="text-[#383838]">Python package manager</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="text-2xl text-[#8cba80ff] font-bold mt-1">✓</div>
+              <div className="text-2xl text-[#ec7357ff] font-bold mt-1">✓</div>
               <div>
-                <p className="text-lg font-mono font-bold text-[#4d5382ff]">
+                <p className="text-lg font-mono font-bold text-[#472c1bff]">
                   AI Vibe Coding Tool
                 </p>
-                <p className="text-[#658e9cff]">
+                <p className="text-[#383838]">
                   Claude, GitHub Copilot, or Codex
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="text-2xl text-[#8cba80ff] font-bold mt-1">✓</div>
+              <div className="text-2xl text-[#ec7357ff] font-bold mt-1">✓</div>
               <div>
-                <p className="text-lg font-mono font-bold text-[#4d5382ff]">
+                <p className="text-lg font-mono font-bold text-[#472c1bff]">
                   Chromium Browser
                 </p>
-                <p className="text-[#658e9cff]">
-                  For taking website screenshots
-                </p>
+                <p className="text-[#383838]">For taking website screenshots</p>
               </div>
             </div>
           </div>
 
-          <p className="text-[#658e9cff] text-lg">
+          <p className="text-[#383838] text-lg">
             Minimum knowledge with programming OR vibe coding tools required. No
             experience? You'll still vibe. 😎
           </p>
@@ -285,7 +275,7 @@ export default function Home() {
       </div>
 
       {/* Inspiration Section */}
-      <div className="bg-[#658e9cff] text-white py-20 px-8 sm:px-16">
+      <div className="bg-[#8fa6cbff] text-white py-20 px-8 sm:px-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-mono text-4xl sm:text-5xl font-bold uppercase mb-8">
             Inspiration
@@ -295,7 +285,7 @@ export default function Home() {
             This project is inspired by an incredible{" "}
             <a
               href="https://x.com/jasonzhou1993/status/1985291755705835832"
-              className="underline font-bold hover:text-[#cacf85ff] transition-colors"
+              className="underline font-bold hover:text-[#e0d68aff] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -304,7 +294,7 @@ export default function Home() {
             by{" "}
             <a
               href="https://x.com/jasonzhou1993"
-              className="underline font-bold hover:text-[#cacf85ff] transition-colors"
+              className="underline font-bold hover:text-[#e0d68aff] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -322,7 +312,7 @@ export default function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-[#514663ff] text-white py-20 px-8 sm:px-16">
+      <div className="bg-[#472c1bff] text-white py-20 px-8 sm:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-mono text-4xl sm:text-5xl font-bold uppercase mb-8">
             Ready to Create Beautiful UIs?
@@ -337,7 +327,7 @@ export default function Home() {
               href="https://pypi.org/project/ui-setup/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#cacf85ff] text-[#514663ff] font-mono font-bold uppercase rounded-sm hover:bg-[#8cba80ff] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0"
+              className="px-8 py-4 bg-[#e0d68aff] text-[#472c1bff] font-mono font-bold uppercase rounded-sm hover:bg-[#d5f9deff] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0"
             >
               Install via pip
             </a>
@@ -345,7 +335,7 @@ export default function Home() {
               href="https://github.com/joaquimcassano/ui-setup"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-white text-[#514663ff] font-mono font-bold uppercase rounded-sm hover:bg-[#f4efea] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0"
+              className="px-8 py-4 bg-white text-[#472c1bff] font-mono font-bold uppercase rounded-sm hover:bg-[#f4efea] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0"
             >
               View on GitHub
             </a>
@@ -354,7 +344,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="bg-[#4d5382ff] text-white py-12 px-8 sm:px-16">
+      <div className="bg-[#383838] text-white py-12 px-8 sm:px-16">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm mb-4">MIT License © 2025 Joaquim Cassano</p>
           <p className="text-xs opacity-75">
