@@ -327,6 +327,27 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Don't Trust Us Section */}
+      <div className="bg-[#ec7357ff] text-white py-20 px-8 sm:px-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-mono text-4xl sm:text-5xl font-bold uppercase mb-8">
+            Don&apos;t trust us?
+          </h2>
+
+          <p className="text-xl leading-relaxed mb-12">
+            This other page was created using the same prompt, but without
+            ui-setup and style.md. Check it by yourself, and see the difference.
+          </p>
+
+          <a
+            href="/boring"
+            className="px-8 py-4 bg-white text-[#ec7357ff] font-mono font-bold uppercase rounded-sm hover:bg-[#f4efea] transition-transform duration-120 ease-in-out hover:translate-x-1.75 hover:-translate-y-1.75 active:translate-x-0 active:translate-y-0 inline-block"
+          >
+            Check it
+          </a>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="bg-[#472c1bff] text-white py-20 px-8 sm:px-16">
         <div className="max-w-4xl mx-auto text-center">
