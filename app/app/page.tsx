@@ -144,13 +144,31 @@ export default function Home() {
           <div className="hidden lg:flex justify-end items-center">
             <div className="w-full">
               {/* DaisyUI Window Mockup */}
-              <div className="mockup-window border-2 border-[#383838] bg-white">
-                <div className="flex justify-center px-4 py-4 bg-white/50">
-                  <div className="text-sm font-mono text-[#383838]">
-                    ui-setup.example.com
+              <div className="border-2 border-[#383838] bg-base-100 rounded-2xl">
+                <div className="mockup-window-toolbar">
+                  <div className="flex justify-between items-start w-full px-4 py-3 gap-4">
+                    <div className="flex gap-2 pt-1">
+                      <div className="w-3 h-3 rounded-full bg-[#ec7357ff]"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#e0d68aff]"></div>
+                      <div className="w-3 h-3 rounded-full bg-[#d5f9deff]"></div>
+                    </div>
+                    <div className="text-sm font-mono text-white flex-1 text-center">
+                      Terminal
+                    </div>
+                    <div className="flex gap-2">
+                      <button className="w-6 h-6 hover:bg-[#383838]/10 rounded text-xs font-bold text-[#383838]">
+                        −
+                      </button>
+                      <button className="w-6 h-6 hover:bg-[#383838]/10 rounded text-xs font-bold text-[#383838]">
+                        □
+                      </button>
+                      <button className="w-6 h-6 hover:bg-[#383838]/10 rounded text-xs font-bold text-[#383838]">
+                        ✕
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div className="grid place-content-center px-0">
+                <div className="grid place-content-center px-0 py-4">
                   <img
                     src="/screenshot.png"
                     alt="UI Setup in action"
