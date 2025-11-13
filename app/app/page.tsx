@@ -102,7 +102,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="flex min-h-screen flex-col justify-center px-8 sm:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto w-full">
           {/* Left Content */}
           <div>
             <h1 className="font-mono text-5xl sm:text-6xl font-bold uppercase text-[#472c1bff] mb-4 leading-tight tracking-tight">
@@ -140,10 +140,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Right Decorative Section */}
           <div className="hidden lg:flex justify-end items-center">
             <div className="w-full">
-              {/* DaisyUI Window Mockup */}
               <div className="border-2 border-[#383838] bg-base-100 rounded-2xl">
                 <div className="mockup-window-toolbar">
                   <div className="flex justify-between items-start w-full px-4 py-3 gap-4">
